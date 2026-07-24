@@ -1,0 +1,87 @@
+/* ==========================================
+   HEADER / NAVBAR (DESKTOP)
+   ========================================== */
+.header3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  
+  /* Tepada qotib durishi uchun (Sticky Header) */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-title3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  white-space: nowrap;
+}
+
+/* Qidiruv oynasi (Search Box) */
+.header-search3 {
+  flex: 1; /* Ortqicha joyni o'zi egallaydi */
+  max-width: 450px; /* Maksimal kenglik */
+  margin: 0 20px; /* Ikki yonidagi masofa */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 10px 16px;
+}
+
+.header-search3 input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #374151;
+}
+
+.header-search3 input::placeholder {
+  color: #9ca3af;
+}
+
+.header-bell3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.header-bell3:hover {
+  background: #f3f4f6;
+}
+
+/* ==========================================
+   MOBIL MOSLASHUV (MOBIL RESPONSIVE <= 450px)
+   ========================================== */
+@media (max-width: 450px) {
+  .header3 {
+    flex-wrap: wrap; /* Elementlarni pastga tushirishga ruxsat beradi */
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .header-title3 {
+    font-size: 18px;
+  }
+
+  /* Qidiruv paneli mobil ekranda eng pastga va 100% bo'lib tushadi */
+  .header-search3 {
+    order: 3; /* Eng pastga o'tkazish */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 14px;
+  }
+}

@@ -1,0 +1,112 @@
+
+.item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+.item-photo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-info {
+  flex: 1;
+  margin-left: 18px;
+}
+
+.item-code {
+  font-size: 12px;
+  color: #8b8b8b;
+}
+
+.item-title {
+  margin: 8px 0;
+  font-size: 17px;
+  color: #222;
+  font-weight: 600;
+}
+
+.item-cost {
+  color: #f47b25;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item-detail {
+  margin-top: 10px;
+}
+
+.item-detail span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.item-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.edit-btn:hover {
+  background: #dbeafe;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+}
+
+
+@media (max-width: 450px) {
+  .item-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .item-photo {
+    width: 100%;
+    height: 180px;
+  }
+
+  .item-info {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .item-title {
+    font-size: 15px;
+  }
+
+  .item-buttons {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 8px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+  }
+}
