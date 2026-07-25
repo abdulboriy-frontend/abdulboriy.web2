@@ -1,0 +1,38 @@
+
+> admin@0.0.0 build
+> vite build
+
+[36mvite v8.1.5 [32mbuilding client environment for production...[36m[39m
+[2K
+transforming...✓ 1793 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-qY0wZtTe.css    4.76 kB │ gzip:  1.31 kB
+dist/assets/index-ClJr0xjR.js   242.95 kB │ gzip: 77.98 kB
+
+[31m✗[39m Build failed in 2.59s
+[31merror during build:
+[31mBuild failed with 1 error:
+
+Error: [vite]: Rolldown failed to resolve import ".sidebar.css" from "C:/Users/bizne/OneDrive/Рабочий стол/admin/src/ui/sidebar/Sidebar.jsx".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rolldownOptions.external`
+    at viteLog (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/chunks/node.js:33154:57)
+    at file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/chunks/node.js:33190:71
+    at onwarn (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/@vitejs/plugin-react/dist/index.js:40:7)
+    at file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/chunks/node.js:33190:28
+    at onRollupLog (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/chunks/node.js:33185:63)
+    at onLog (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/chunks/node.js:32953:4)
+    at file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/rolldown/dist/shared/rolldown-build-CtPvmZgJ.mjs:50:26
+    at logger (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/rolldown/dist/shared/rolldown-build-CtPvmZgJ.mjs:41:3)[31m
+    at aggregateBindingErrorsIntoJsError (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/rolldown/dist/shared/error-BHRSI0R7.mjs:48:18)
+    at unwrapBindingResult (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/rolldown/dist/shared/error-BHRSI0R7.mjs:18:128)
+    at #build (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/rolldown/dist/shared/rolldown-build-CtPvmZgJ.mjs:3276:34)
+    at async buildEnvironment (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/chunks/node.js:33061:66)
+    at async Object.build (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/chunks/node.js:33483:19)
+    at async Object.buildApp (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/chunks/node.js:33480:153)
+    at async CAC.<anonymous> (file:///C:/Users/bizne/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/admin/node_modules/vite/dist/node/cli.js:776:3) {
+  errors: [Getter/Setter]
+}[39m
