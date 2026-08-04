@@ -32,7 +32,7 @@
 }
 
 .header-search3 input {
-  width: 100%;
+  width: 330px;
   border: none;
   outline: none;
   background: transparent;
@@ -76,5 +76,9 @@
     max-width: 100%;
     margin: 0;
     padding: 10px 14px;
+  }
+  .header-search3 input{
+    width: 200px;
+    font-size: 11px;
   }
 }

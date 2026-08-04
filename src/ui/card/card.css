@@ -1,4 +1,3 @@
-
 .item-card {
   display: flex;
   align-items: center;
@@ -8,6 +7,7 @@
   border-radius: 12px;
   background: #fff;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .item-photo {
@@ -15,6 +15,7 @@
   height: 90px;
   object-fit: cover;
   border-radius: 10px;
+  flex-shrink: 0;
 }
 
 .item-info {
@@ -54,6 +55,7 @@
 
 .item-buttons {
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -79,34 +81,64 @@
   background: #fee2e2;
 }
 
-
 @media (max-width: 450px) {
   .item-card {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: 12px;
-    padding: 14px;
+    gap: 10px;
+    padding: 10px;
   }
 
   .item-photo {
-    width: 100%;
-    height: 180px;
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
   }
 
   .item-info {
     margin-left: 0;
-    width: 100%;
+    padding-right: 50px;
+  }
+
+  .item-code {
+    font-size: 10px;
   }
 
   .item-title {
-    font-size: 15px;
+    font-size: 13px;
+    margin: 3px 0;
+    line-height: 1.3;
+  }
+
+  .item-cost {
+    font-size: 14px;
+  }
+
+  .item-detail {
+    margin-top: 4px;
+  }
+
+  .item-detail span {
+    font-size: 11px;
+    gap: 4px;
   }
 
   .item-buttons {
-    width: 100%;
-    justify-content: flex-end;
-    margin-top: 8px;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    flex-direction: row;
+    gap: 4px;
+    width: auto;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
   }
 }

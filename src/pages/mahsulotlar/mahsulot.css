@@ -1,15 +1,192 @@
+.mahsulotlar-page {
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
 
+.mahsulotlar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.mahsulotlar-tabs {
+    display: flex;
+    gap: 20px;
+}
+
+.m-tab {
+    font-size: 15px;
+    color: #6b7280;
+    cursor: pointer;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.m-tab-active {
+    color: #f97316;
+    border-bottom: 2px solid #f97316;
+    font-weight: 600;
+}
+
+.mahsulotlar-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+    color: #374151;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.mahsulotlar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    gap: 20px;
+}
+
+.product-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.status-active {
+    background-color: #d1fae5;
+    color: #10b981;
+}
+
+.status-draft {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f97316;
+    margin: 0;
+}
+
+.product-meta {
+    font-size: 13px;
+    color: #9ca3af;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+.card-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.action-icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #6b7280;
+    transition: all 0.2s;
+}
+
+.action-icon-btn:hover {
+    background: #f9fafb;
+    color: #f97316;
+}
+
+.action-icon-btn.delete:hover {
+    color: #ef4444;
+}
+
+.fab-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #f97316;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.fab-btn:hover {
+    background: #ea580c;
+}
 
 .modal {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.4);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
 }
-
 
 .modal-box {
     width: 420px;
@@ -17,100 +194,143 @@
     padding: 25px;
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-
-
-.modal-box h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-
-
 
 .modal-box form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
-
 
 .modal-box input {
     width: 100%;
-    padding: 13px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    outline: none;
-    font-size: 15px;
+    border-radius: 8px;
     box-sizing: border-box;
 }
 
-
-
-
-
-
-
-
 .save {
-    width: 100%;
-    padding: 13px;
-    background: #6c4cf1;
+    padding: 12px;
+    background: #f97316;
     color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
 }
-
-
-.save:hover {
-    background: #5637d6;
-}
-
-
-
-/* CLOSE BUTTON */
 
 .close {
     position: absolute;
     right: 12px;
     top: 12px;
-    width: 35px;
-    height: 35px;
     border-radius: 50%;
     border: none;
     background: #f1f1f1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 }
+@media (max-width: 450px) {
+  .mahsulotlar-page {
+    padding: 10px;
+  }
 
+  .mahsulotlar-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
 
-.close:hover {
-    background: #ddd;
-}
+  .mahsulotlar-tabs {
+    gap: 12px;
+    overflow-x: auto;
+  }
 
+  .m-tab {
+    font-size: 13px;
+    padding-bottom: 6px;
+    white-space: nowrap;
+  }
 
-
-
-
-.fab-btn {
+  .mahsulotlar-actions {
+    width: 100%;
     display: flex;
-    align-items: center;
     gap: 8px;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 10px;
-    background: #6c4cf1;
-    color: white;
-    cursor: pointer;
-}
+  }
 
+  .filter-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 7px 10px;
+    font-size: 12px;
+  }
 
-.fab-btn:hover {
-    background: #5637d6;
+  .mahsulotlar-list {
+    gap: 10px;
+  }
+
+  .product-card {
+    padding: 10px;
+    gap: 10px;
+    position: relative;
+  }
+
+  .product-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .product-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .status-badge {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .sku-text {
+    font-size: 10px;
+  }
+
+  .product-title {
+    font-size: 13px;
+    padding-right: 60px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .product-meta {
+    font-size: 11px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .card-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .action-icon-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .fab-btn {
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .modal-box {
+    width: 92%;
+    padding: 16px;
+  }
 }
