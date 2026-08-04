@@ -6,7 +6,7 @@
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
   
-  position: sticky;
+  position:sticky;
   top: 0;
   z-index: 100;
 
@@ -32,7 +32,7 @@
 }
 
 .header-search3 input {
-  width: 330px;
+  width: 100%;
   border: none;
   outline: none;
   background: transparent;
@@ -76,9 +76,5 @@
     max-width: 100%;
     margin: 0;
     padding: 10px 14px;
-  }
-  .header-search3 input{
-    width: 200px;
-    font-size: 11px;
   }
 }

@@ -1,234 +1,244 @@
+/* ASOSIY SAHIFA */
 .mahsulotlar-page {
-    padding: 24px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f8f9fa;
-    min-height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
+/* YUQORI PANEL (TABLAR VA TUGMALAR) */
 .mahsulotlar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .mahsulotlar-tabs {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #e5e7eb;
 }
 
 .m-tab {
-    font-size: 15px;
-    color: #6b7280;
-    cursor: pointer;
-    padding-bottom: 10px;
-    font-weight: 500;
+  padding-bottom: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .m-tab-active {
-    color: #f97316;
-    border-bottom: 2px solid #f97316;
-    font-weight: 600;
+  color: #f97316;
+  border-bottom: 2px solid #f97316;
+  margin-bottom: -2px;
 }
 
 .mahsulotlar-actions {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .filter-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    background: white;
-    color: #374151;
-    font-size: 14px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  color: #374151;
 }
 
+/* MAHSULOTLAR RO'YXATI */
 .mahsulotlar-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
+/* MAHSULOT KARTOCHKASI (DESKTOP) */
 .product-card {
-    display: flex;
-    align-items: center;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 16px;
-    position: relative;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  position: relative;
 }
 
 .product-card img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .product-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  flex: 1;
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
 }
 
 .status-badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 700;
-    width: fit-content;
-    text-transform: uppercase;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
 .status-active {
-    background-color: #d1fae5;
-    color: #10b981;
+  background: #dcfce7;
+  color: #15803d;
 }
 
-.status-draft {
-    background-color: #f3f4f6;
-    color: #6b7280;
+.sku-text {
+  font-size: 12px;
+  color: #9ca3af;
 }
 
 .product-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #111827;
-    margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin: 4px 0;
 }
 
 .product-price {
-    font-size: 16px;
-    font-weight: 700;
-    color: #f97316;
-    margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f97316;
+  margin: 4px 0;
 }
 
 .product-meta {
-    font-size: 13px;
-    color: #9ca3af;
-    display: flex;
-    gap: 15px;
-    margin: 0;
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.product-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .card-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-left: auto;
+  display: flex;
+  gap: 8px;
 }
 
 .action-icon-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #6b7280;
-    transition: all 0.2s;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4b5563;
+  transition: 0.2s;
 }
 
 .action-icon-btn:hover {
-    background: #f9fafb;
-    color: #f97316;
+  background: #f3f4f6;
 }
 
 .action-icon-btn.delete:hover {
-    color: #ef4444;
+  background: #fee2e2;
+  color: #ef4444;
+  border-color: #fca5a5;
 }
 
+/* FAB BUTTON (SUZUVCHI TUGMA) */
 .fab-btn {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 10px;
-    background: #f97316;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
 
-.fab-btn:hover {
-    background: #ea580c;
-}
-
+/* MODAL */
 .modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .modal-box {
-    width: 420px;
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    position: relative;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 400px;
+  position: relative;
+}
+
+.modal-box .close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .modal-box form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .modal-box input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
 }
 
-.save {
-    padding: 12px;
-    background: #f97316;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
+.modal-box .save {
+  padding: 10px;
+  background: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.close {
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    border-radius: 50%;
-    border: none;
-    background: #f1f1f1;
-    cursor: pointer;
-}
+/* MOBIL UCHUN RESPONSIVE (MAX-WIDTH: 450PX) */
 @media (max-width: 450px) {
   .mahsulotlar-page {
     padding: 10px;
@@ -237,7 +247,7 @@
   .mahsulotlar-top {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
   }
 
   .mahsulotlar-tabs {
@@ -246,32 +256,24 @@
   }
 
   .m-tab {
-    font-size: 13px;
-    padding-bottom: 6px;
+    font-size: 12px;
     white-space: nowrap;
   }
 
   .mahsulotlar-actions {
     width: 100%;
-    display: flex;
-    gap: 8px;
   }
 
   .filter-btn {
     flex: 1;
     justify-content: center;
-    padding: 7px 10px;
-    font-size: 12px;
-  }
-
-  .mahsulotlar-list {
-    gap: 10px;
   }
 
   .product-card {
     padding: 10px;
     gap: 10px;
     position: relative;
+    align-items: flex-start;
   }
 
   .product-card img {
@@ -279,41 +281,27 @@
     height: 60px;
   }
 
-  .product-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-  }
-
-  .status-badge {
-    font-size: 10px;
-    padding: 1px 4px;
-  }
-
-  .sku-text {
-    font-size: 10px;
+  .product-info {
+    padding-right: 60px; /* Tahrirlash va o'chirish tugmalari tegib ketmasligi uchun */
   }
 
   .product-title {
     font-size: 13px;
-    padding-right: 60px;
   }
 
   .product-price {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .product-meta {
-    font-size: 11px;
-    flex-wrap: wrap;
-    gap: 6px;
+    font-size: 10px;
+    gap: 8px;
   }
 
   .card-icons {
     position: absolute;
     top: 10px;
     right: 10px;
-    flex-direction: row;
     gap: 4px;
   }
 
@@ -330,7 +318,7 @@
   }
 
   .modal-box {
-    width: 92%;
+    width: 90%;
     padding: 16px;
   }
 }
