@@ -9,10 +9,8 @@ const Navbar = () => {
 
       <div className="header-search3">
         <Search size={16} color="#9CA3AF" />
-        <input
-          type="text"
-          placeholder="Mahsulot nomi yoki SKU bo'yicha qidiruv..."
-        />
+        
+        <input type="text"  placeholder="Mahsulot nomi yoki SKU bo'yicha qidiruv..."/>
       </div>
 
       <div className="header-bell3">
