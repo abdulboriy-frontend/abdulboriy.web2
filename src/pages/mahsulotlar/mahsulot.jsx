@@ -6,6 +6,8 @@ import "./mahsulot.css";
 const Mahsulot = () => {
   const [products, setProducts] = useState([]);
   const [modal, setModal] = useState(false);
+  const [deleteModal, setDeleteModal] = useState(false);
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
   const [data, setData] = useState({
     name: "",
@@ -54,15 +56,29 @@ const Mahsulot = () => {
     }
   }
 
-  async function deleteProduct(id) {
-    if (!window.confirm("Mahsulotni o'chirmoqchimisiz?")) return;
+  function openDeleteModal(id) {
+    setSelectedProductId(id);
+    setDeleteModal(true);
+  }
+
+  async function confirmDelete() {
+    if (!selectedProductId) return;
+
+    const idToDelete = selectedProductId;
+
+    setProducts(prevProducts => prevProducts.filter(item => (item._id || item.id) !== idToDelete));
+    setDeleteModal(false);
+    setSelectedProductId(null);
 
     try {
-      await axios.delete(`https://uzum-api.onrender.com/api/products/${id}`);
-      await getProducts();
+      await axios({ 
+        method: "DELETE", 
+        url: `https://uzum-api.onrender.com/api/products/${idToDelete}` 
+      });
     } catch (error) {
       console.log(error);
-      alert("Mahsulotni o'chirishda xatolik!");
+      alert("Mahsulotni serverdan o'chirishda xatolik yuz berdi!");
+      getProducts(); 
     }
   }
 
@@ -118,7 +134,7 @@ const Mahsulot = () => {
                 <div className="card-icons">
                   <button className="action-icon-btn"><Pencil size={16} /></button>
 
-                  <button className="action-icon-btn delete" onClick={() => deleteProduct(productId)}>
+                  <button className="action-icon-btn delete" onClick={() => openDeleteModal(productId)}>
                     <Trash2 size={16} />
                   </button>
                 </div>
@@ -126,14 +142,15 @@ const Mahsulot = () => {
             );
           })
         )}
-      </div>      <button className="fab-btn" onClick={() => setModal(true)}>
+      </div>
+
+      <button className="fab-btn" onClick={() => setModal(true)}>
         <Plus size={16} /> Yangi mahsulot
       </button>
 
       {modal && (
         <div className="modal">
           <div className="modal-box">
-
             <button className="close" onClick={closeModal}>
               <X size={22} />
             </button>
@@ -142,20 +159,37 @@ const Mahsulot = () => {
 
             <form onSubmit={saveProduct}>
               <input name="name" type="text" placeholder="Mahsulot nomi" value={data.name} onChange={changeInput} required />
-
               <input name="price" type="number" placeholder="Narxi" value={data.price} onChange={changeInput} min="0" required />
-
               <input name="imageUrl" type="url" placeholder="Rasm URL" value={data.imageUrl} onChange={changeInput} required />
-
               <input name="category" type="text" placeholder="Kategoriya" value={data.category} onChange={changeInput} required />
-
               <input name="minOrderQuantity" type="number" placeholder="Minimal buyurtma" value={data.minOrderQuantity} onChange={changeInput} min="1" required />
 
               <button type="submit" className="save">
                 Saqlash
               </button>
             </form>
+          </div>
+        </div>
+      )}
 
+      {deleteModal && (
+        <div className="modal">
+          <div className="modal-box delete-modal-box">
+            <button className="close" onClick={() => setDeleteModal(false)}>
+              <X size={22} />
+            </button>
+
+            <h2>Mahsulotni o'chirish</h2>
+            <p>Haqiqatan ham ushbu mahsulotni o'chirmoqchimisiz?</p>
+
+            <div className="modal-actions">
+              <button className="btn-cancel" onClick={() => setDeleteModal(false)}>
+                Yo'q
+              </button>
+              <button className="btn-delete" onClick={confirmDelete}>
+                Ha, o'chirish
+              </button>
+            </div>
           </div>
         </div>
       )}
